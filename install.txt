@@ -1,0 +1,19 @@
+mvn package
+mvn source:jar
+
+mvn install:install-file \
+ -DgroupId=company.evo \
+ -DartifactId=jmorphy2-lucene \
+ -Dversion=0.2.0 \
+ -Dpackaging=jar \
+ -Dfile=target/jmorphy2-lucene-0.2.0.jar \
+ -DlocalRepositoryPath=../mvn-repo
+
+mvn install:install-file \
+ -DgroupId=company.evo \
+ -DartifactId=jmorphy2-lucene \
+ -Dversion=0.2.0 \
+ -Dpackaging=jar \
+ -Dfile=target/jmorphy2-lucene-0.2.0-sources.jar \
+ -DlocalRepositoryPath=../mvn-repo \
+ -Dclassifier=sources
